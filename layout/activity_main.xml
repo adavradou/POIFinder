@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    tools:context=".MainActivity">
+
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="50dp"
+        android:layout_weight="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.432"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radiusEditText" />
+
+
+    <Button
+        android:id="@+id/okButton"
+        android:layout_width="67dp"
+        android:layout_height="49dp"
+        android:onClick="okButtonMethod"
+        android:text="@android:string/ok"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.813"
+        app:layout_constraintStart_toEndOf="@+id/radiusEditText"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/radiusEditText"
+        android:layout_width="104dp"
+        android:layout_height="55dp"
+        android:ems="10"
+        android:hint="Radius (m)"
+        android:inputType="number"
+        app:layout_constraintEnd_toStartOf="@+id/map"
+        app:layout_constraintHorizontal_bias="0.38"
+        app:layout_constraintStart_toEndOf="@+id/map"
+        app:layout_constraintTop_toTopOf="@+id/okButton" />
+
+    <Button
+        android:id="@+id/updateButton"
+        android:layout_width="53dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="4dp"
+        android:drawableTop="@drawable/ic_update"
+        android:onClick="updateButtonMethod"
+        android:visibility="invisible"
+        app:layout_constraintStart_toEndOf="@+id/statisticsButton"
+        app:layout_constraintTop_toTopOf="@+id/radiusEditText" />
+
+    <Button
+        android:id="@+id/authenticationButton"
+        android:layout_width="53dp"
+        android:layout_height="49dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginLeft="72dp"
+        android:layout_marginTop="4dp"
+        android:drawableTop="@drawable/ic_fingerprint"
+        android:onClick="authenticationButtonMethod"
+        app:layout_constraintStart_toEndOf="@+id/statisticsButton"
+        app:layout_constraintTop_toTopOf="@+id/radiusEditText" />
+
+    <Button
+        android:id="@+id/statisticsButton"
+        android:layout_width="55dp"
+        android:layout_height="50dp"
+        android:drawableTop="@drawable/ic_statistics"
+        android:onClick="statisticsButtonMethod"
+        app:layout_constraintEnd_toStartOf="@+id/updateButton"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/updateButton" />
+
+</android.support.constraint.ConstraintLayout>
