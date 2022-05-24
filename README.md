@@ -1,5 +1,5 @@
 # POIFinder
-App created with Android Studio that informs about POIs (bars, restaurants, etc) in a selected radius.
+App created with Android Studio that informs about Points Of Interests-POIs (bars, restaurants, etc) in a selected radius.
 
 The main screen of the application has all the app buttons on top and the google maps just below, all in the same screen. 
 
